@@ -1,0 +1,5 @@
+RegisterCommand("revive", function(args)
+    if vRP.hasPermission(PlayerPedId(), "player.revive")
+    TriggerEvent("TRP:FIXCLIENT", vRP.getUserId(args[1]))
+    vRPclient.varyHealth(args[1], {100})
+end)
